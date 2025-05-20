@@ -21,7 +21,7 @@ def use_aws(
     Args:
         region (str): Region name for calling the operation on AWS.
         service_name (str): The name of the AWS service. If you want to query s3, you should use s3api if possible.
-        operation_name (str): The name of the operation to perform.
+        operation_name (str): The name of the operation to perform. You should also prefer snake case.
         label (str): Human readable description of the api that is being called.
         parameters (dict): The parameters for the operation. The parameter keys MUST conform to the AWS CLI specification. You should prefer to use JSON Syntax over shorthand syntax wherever possible. For parameters that are booleans, prioritize using flags with no value. Denote these flags with flag names as key and an empty string as their value. You should also prefer kebab case.
         profile_name (str): Optional: AWS profile name to use from ~/.aws/credentials. Defaults to default profile if not specified.
