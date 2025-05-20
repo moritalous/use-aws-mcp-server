@@ -1,6 +1,6 @@
 [project]
 name = "use-aws-mcp-server"
-version = "0.1.0"
+version = "0.2.0"
 description = "MCP server that provides AWS CLI integration for AI assistants, enabling execution of AWS API calls with proper parameter validation and error handling"
 readme = "README.md"
 requires-python = ">=3.10"
