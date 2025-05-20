@@ -25,7 +25,11 @@ To add this MCP server to your Amazon Q or Claude, add the following to your MCP
   "mcpServers": {
     "use-aws-mcp-server": {
         "command": "uvx",
-        "args": ["use-aws-mcp-server@latest"]
+        "args": ["use-aws-mcp-server@latest"],
+        "env": {
+          "AWS_REGION": "ap-northeast-1",
+          "AWS_PROFILE": "default"
+        }
     }
   }
 }
@@ -39,11 +43,11 @@ Make an AWS CLI api call with the specified service, operation, and parameters.
 
 ```python
 def use_aws(
-    region: str,
     service_name: str,
     operation_name: str,
     label: str,
-    parameters: dict = None,
+    region: str = None,
+    parameters: dict = {},
     profile_name: str = None,
 ) -> str:
 ```
