@@ -12,7 +12,7 @@ def use_aws(
     service_name: str,
     operation_name: str,
     label: str,
-    parameters: dict = None,
+    parameters: dict = {},
     profile_name: str = None,
 ):
     """
